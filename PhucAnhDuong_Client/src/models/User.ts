@@ -9,7 +9,6 @@ export interface UserResponse extends BaseResponse {
   phone: string;
   gender: 'M' | 'F';
   address: AddressResponse;
-  avatar: string | null;
   status: number;
   roles: RoleResponse[];
 }
@@ -22,7 +21,6 @@ export interface UserRequest {
   phone: string;
   gender: 'M' | 'F';
   address: AddressRequest;
-  avatar: string | null;
   status: number;
   roles: Role_UserRequest[];
 }

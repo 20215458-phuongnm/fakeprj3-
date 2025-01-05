@@ -32,8 +32,7 @@ const useStyles = createStyles((theme) => ({
   wrapper: {
     minHeight: 600,
     backgroundSize: 'cover',
-    backgroundImage:
-      'url(https://bizweb.dktcdn.net/100/430/027/articles/tra-dao-1.jpg?v=1625217068023)',
+   
     backgroundPosition: 'bottom',
 
     [theme.fn.smallerThan('sm')]: {

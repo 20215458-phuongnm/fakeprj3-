@@ -6,10 +6,9 @@ interface ElectroLogoProps {
 }
 
 function ElectroLogo({ width = 60 }: ElectroLogoProps) {
-  const imageUrl =
-    'https://phucanhduong.com/wp-content/uploads/2024/03/Logo-Phuc-Anh-Duong-Final-01-765x1024.png';
+  const imageUrl = '/MPP-01.png';
 
-  return <img src={imageUrl} width={width} alt='PhucAnhDuong Logo' style={{ marginTop: '50px' }} />;
+  return <img src={imageUrl} width={width} alt='MPP Logo' style={{ marginTop: '50px' }} />;
 }
 
 export default ElectroLogo;

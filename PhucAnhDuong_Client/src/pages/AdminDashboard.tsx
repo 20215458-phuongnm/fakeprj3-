@@ -36,7 +36,7 @@ function AdminDashboard() {
 
       <Paper shadow="xs" p="md">
         <Stack>
-          <Text size="lg" weight={500} color="dimmed">Tổng quan</Text>
+          {/* <Text size="lg" weight={500} color="dimmed">Tổng quan</Text> */}
           <Grid>
             <Grid.Col span={3}>
               <OverviewCard title="Tổng số khách hàng" number={statistic.totalCustomer} color="blue" icon={Users}/>
@@ -47,35 +47,14 @@ function AdminDashboard() {
             <Grid.Col span={3}>
               <OverviewCard title="Tổng số đơn hàng" number={statistic.totalOrder} color="teal" icon={FileBarcode}/>
             </Grid.Col>
-            <Grid.Col span={3}>
-              <OverviewCard title="Tổng số vận đơn" number={statistic.totalWaybill} color="grape" icon={Truck}/>
-            </Grid.Col>
+            
             <Grid.Col span={3}>
               <OverviewCard title="Tổng số đánh giá" number={statistic.totalReview} color="yellow" icon={Star}/>
-            </Grid.Col>
-            <Grid.Col span={3}>
-              <OverviewCard
-                title="Tổng số khuyến mãi hiện tại"
-                number={statistic.totalActivePromotion}
-                color="pink"
-                icon={Percentage}
-              />
-            </Grid.Col>
-            <Grid.Col span={3}>
-              <OverviewCard
-                title="Tổng số nhà cung cấp"
-                number={statistic.totalSupplier}
-                color="violet"
-                icon={BuildingWarehouse}
-              />
-            </Grid.Col>
-            <Grid.Col span={3}>
-              <OverviewCard title="Tổng số thương hiệu" number={statistic.totalBrand} color="indigo" icon={BrandApple}/>
             </Grid.Col>
           </Grid>
         </Stack>
       </Paper>
-
+      {/* 
       <Grid>
         <Grid.Col lg={6}>
           <Stack>
@@ -183,9 +162,9 @@ function AdminDashboard() {
                 </BarChart>
               </Stack>
             </Paper>
-          </Stack>
-        </Grid.Col>
-      </Grid>
+          </Stack> */}
+      {/* </Grid.Col> */}
+      {/* </Grid> */}
     </Stack>
   );
 }

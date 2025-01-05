@@ -37,13 +37,12 @@ function ClientProduct() {
         <Stack spacing={theme.spacing.xl * 2}>
           <ClientProductIntro product={product}/>
 
-          {product.productSpecifications && <ClientProductSpecification product={product}/>}
+       
 
           {product.productDescription && <ClientProductDescription product={product}/>}
 
           <ClientProductReviews productSlug={slug as string}/>
 
-          {product.productRelatedProducts.length > 0 && <ClientProductRelatedProducts product={product}/>}
         </Stack>
       </Container>
     </main>

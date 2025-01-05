@@ -24,14 +24,7 @@ class PageConfigs {
       label: 'ID',
       type: EntityPropertyType.NUMBER,
     },
-    createdAt: {
-      label: 'Ngày tạo',
-      type: EntityPropertyType.DATE,
-    },
-    updatedAt: {
-      label: 'Ngày cập nhật',
-      type: EntityPropertyType.DATE,
-    },
+  
     createdBy: {
       label: 'Người tạo',
       type: EntityPropertyType.NUMBER,

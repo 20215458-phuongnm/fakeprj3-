@@ -17,7 +17,7 @@ class RoleConfigs extends Configs {
   static manageTitleLinks: TitleLink[] = UserConfigs.manageTitleLinks;
 
   protected static _rawProperties = {
-    ...PageConfigs.getProperties(true, true, true),
+    ...PageConfigs.getProperties(true),
     code: {
       label: 'Mã quyền',
       type: EntityPropertyType.STRING,

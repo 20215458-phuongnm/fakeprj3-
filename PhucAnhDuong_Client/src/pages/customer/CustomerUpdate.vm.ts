@@ -46,7 +46,7 @@ function useCustomerUpdateViewModel(id: number) {
         'user.address.line': customerResponse.user.address.line || '',
         'user.address.provinceId': customerResponse.user.address.province ? String(customerResponse.user.address.province.id) : null,
         'user.address.districtId': customerResponse.user.address.district ? String(customerResponse.user.address.district.id) : null,
-        'user.avatar': customerResponse.user.avatar || '',
+        'user.avatar':  '',
         'user.status': String(customerResponse.user.status),
         'user.roles': [String(CustomerConfigs.CUSTOMER_ROLE_ID)],
         customerGroupId: String(customerResponse.customerGroup.id),
@@ -125,7 +125,7 @@ function useCustomerUpdateViewModel(id: number) {
             districtId: Number(formValues['user.address.districtId']),
             wardId: null,
           },
-          avatar: formValues['user.avatar'].trim() || null,
+         
           status: Number(formValues['user.status']),
           roles: [{ id: CustomerConfigs.CUSTOMER_ROLE_ID }],
         },

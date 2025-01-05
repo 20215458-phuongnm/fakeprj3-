@@ -179,7 +179,7 @@ function ClientCart() {
                     <tr>
                       <td colSpan={5}>
                         <Stack my={theme.spacing.xl} sx={{ alignItems: 'center', color: theme.colors.blue[6] }}>
-                          <Marquee size={125} strokeWidth={1}/>
+                          
                           <Text size="xl" weight={500}>Chưa thêm mặt hàng nào</Text>
                         </Stack>
                       </td>
@@ -306,7 +306,7 @@ function ClientCart() {
       <Container size="xl">
         <Stack spacing="lg">
           <Group spacing="xs">
-            <ShoppingCart/>
+            
             <Title order={2}>Giỏ hàng</Title>
           </Group>
 
@@ -390,15 +390,7 @@ function CartItemTableRow({ cartItem }: { cartItem: ClientCartVariantResponse })
             >
               {cartItem.cartItemVariant.variantProduct.productName}
             </Anchor>
-            {cartItem.cartItemVariant.variantProperties && (
-              <Stack spacing={1.5}>
-                {cartItem.cartItemVariant.variantProperties.content.map(variantProperty => (
-                  <Text key={variantProperty.id} size="xs" color="dimmed">
-                    {variantProperty.name}: {variantProperty.value}
-                  </Text>
-                ))}
-              </Stack>
-            )}
+           
           </Stack>
         </Group>
       </td>

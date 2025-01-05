@@ -25,9 +25,7 @@ function ClientSetting() {
 
                 <Group position="apart">
                   <Group>
-                    <ThemeIcon radius="xl" size="xl" variant="light">
-                      <User strokeWidth={1.5}/>
-                    </ThemeIcon>
+                    
                     <Stack spacing={0}>
                       <Text weight={500}>Thông tin cá nhân</Text>
                       <Text color="dimmed" size="sm">Cập nhật họ và tên, giới tính, địa chỉ...</Text>

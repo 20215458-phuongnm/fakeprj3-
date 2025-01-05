@@ -52,33 +52,13 @@ function CustomerManage() {
           {entity.user.phone}
         </Highlight>
       </td>
-      <td>
-        <Avatar src={entity.user.avatar} alt={entity.user.fullname} radius="xl" size="sm"/>
+      <td>  
+        <Highlight highlight={searchToken} highlightColor="blue" size="sm">
+          {entity.customerStatus.name}
+        </Highlight>
+       
       </td>
-      <td>
-        <Group spacing="xs">
-          <ColorSwatch color={entity.customerGroup.color}/>
-          <Highlight highlight={searchToken} highlightColor="blue" size="sm">
-            {entity.customerGroup.name}
-          </Highlight>
-        </Group>
-      </td>
-      <td>
-        <Group spacing="xs">
-          <ColorSwatch color={entity.customerStatus.color}/>
-          <Highlight highlight={searchToken} highlightColor="blue" size="sm">
-            {entity.customerStatus.name}
-          </Highlight>
-        </Group>
-      </td>
-      <td>
-        <Group spacing="xs">
-          <ColorSwatch color={entity.customerResource.color}/>
-          <Highlight highlight={searchToken} highlightColor="blue" size="sm">
-            {entity.customerResource.name}
-          </Highlight>
-        </Group>
-      </td>
+     
     </>
   );
 
@@ -88,14 +68,7 @@ function CustomerManage() {
         <td>{CustomerConfigs.properties.id.label}</td>
         <td>{entity.id}</td>
       </tr>
-      <tr>
-        <td>{CustomerConfigs.properties.createdAt.label}</td>
-        <td>{DateUtils.isoDateToString(entity.createdAt)}</td>
-      </tr>
-      <tr>
-        <td>{CustomerConfigs.properties.updatedAt.label}</td>
-        <td>{DateUtils.isoDateToString(entity.updatedAt)}</td>
-      </tr>
+     
       <tr>
         <td>{CustomerConfigs.properties['user.username'].label}</td>
         <td>{entity.user.username}</td>
@@ -136,12 +109,7 @@ function CustomerManage() {
         <td>{CustomerConfigs.properties['user.address.district.code'].label}</td>
         <td>{entity.user.address.district?.code}</td>
       </tr>
-      <tr>
-        <td>{CustomerConfigs.properties['user.avatar'].label}</td>
-        <td>
-          <Avatar src={entity.user.avatar} alt={entity.user.fullname} radius="xl" size="sm"/>
-        </td>
-      </tr>
+      
       <tr>
         <td>{CustomerConfigs.properties['user.status'].label}</td>
         <td>{userStatusBadgeFragment(entity.user.status)}</td>
@@ -154,20 +122,12 @@ function CustomerManage() {
           </Stack>
         </td>
       </tr>
-      <tr>
-        <td>{CustomerConfigs.properties['customerGroup.name'].label}</td>
-        <td>
-          <Group spacing="xs">
-            <ColorSwatch color={entity.customerGroup.color}/>
-            {entity.customerGroup.name}
-          </Group>
-        </td>
-      </tr>
+    
       <tr>
         <td>{CustomerConfigs.properties['customerStatus.name'].label}</td>
         <td>
           <Group spacing="xs">
-            <ColorSwatch color={entity.customerStatus.color}/>
+          
             {entity.customerStatus.name}
           </Group>
         </td>

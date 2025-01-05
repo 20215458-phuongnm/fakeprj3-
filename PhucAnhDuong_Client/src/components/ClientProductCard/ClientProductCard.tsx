@@ -138,16 +138,7 @@ function ClientProductCard({ product, search }: ClientProductCardProps) {
               transition: 'opacity .2s ease-in',
             }}
           >
-            <ActionIcon
-              color="pink"
-              size="lg"
-              radius="xl"
-              variant="filled"
-              title="Thêm vào danh sách yêu thích"
-              onClick={handleCreateWishButton}
-            >
-              <HeartPlus size={18}/>
-            </ActionIcon>
+            
             {product.productSaleable
               ? (
                 <ActionIcon
@@ -201,9 +192,7 @@ function ClientProductCard({ product, search }: ClientProductCardProps) {
               </Badge>
             </Group>
           )}
-          <Text size="sm" color="dimmed">
-            {product.productVariants.length} phiên bản
-          </Text>
+          
         </Stack>
       </Stack>
     </Card>

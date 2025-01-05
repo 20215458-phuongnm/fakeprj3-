@@ -78,23 +78,12 @@ function OrderUpdate() {
         title={OrderConfigs.updateTitle}
       />
 
-      <DefaultPropertyPanel
-        id={order.id}
-        createdAt={order.createdAt}
-        updatedAt={order.updatedAt}
-        createdBy="1"
-        updatedBy="1"
-      />
 
       <Grid>
         <Grid.Col xs={8}>
           <Paper shadow="xs">
             <Stack spacing="xs" p="sm">
-              <VariantFinder
-                selectedVariants={variants}
-                onClickItem={handleClickVariantResultItem}
-                errorSearchInput={form.errors.orderVariants}
-              />
+              
               {variants.length > 0 && (
                 <VariantTable
                   type={EntityType.ORDER}
@@ -232,26 +221,8 @@ function OrderUpdate() {
                       {...form.getInputProps('toAddress')}
                     />
                   </Grid.Col>
-                  <Grid.Col>
-                    <Select
-                      required
-                      label="Nguồn đơn hàng"
-                      placeholder="--"
-                      data={orderResourceSelectList}
-                      {...form.getInputProps('orderResourceId')}
-                    />
-                  </Grid.Col>
-                  <Grid.Col>
-                    <Select
-                      label="Lý do hủy đơn hàng"
-                      placeholder="--"
-                      clearable
-                      data={orderCancellationReasonSelectList}
-                      // Chỉ bật khi trạng thái đơn hàng là "Hủy bỏ" (5)
-                      disabled={form.values.status !== '5'}
-                      {...form.getInputProps('orderCancellationReasonId')}
-                    />
-                  </Grid.Col>
+                
+                 
                   <Grid.Col>
                     <Textarea
                       label="Ghi chú đơn hàng"
@@ -281,7 +252,7 @@ function OrderUpdate() {
                 <Divider mt="xs"/>
 
                 <Group position="apart" p="sm">
-                  <Button variant="default" onClick={resetForm}>Mặc định</Button>
+
                   <Button type="submit">Cập nhật</Button>
                 </Group>
               </Stack>

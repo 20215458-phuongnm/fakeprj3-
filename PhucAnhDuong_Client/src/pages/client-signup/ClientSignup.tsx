@@ -84,7 +84,7 @@ function ClientSignup() {
             styles={{ root: { width: '100%', maxWidth: 800 }, content: { paddingTop: 50 } }}
           >
             <Stepper.Step
-              icon={<UserCheck size={18}/>}
+             
               label="Bước 1"
               description="Tạo tài khoản"
               allowStepSelect={false}
@@ -92,7 +92,7 @@ function ClientSignup() {
               <ClientSignupStepOne nextStep={nextStep}/>
             </Stepper.Step>
             <Stepper.Step
-              icon={<MailOpened size={18}/>}
+           
               label="Bước 2"
               description="Xác nhận email"
               allowStepSelect={false}
@@ -100,7 +100,7 @@ function ClientSignup() {
               <ClientSignupStepTwo nextStep={nextStep} userId={Number(userId) || null}/>
             </Stepper.Step>
             <Stepper.Step
-              icon={<ShieldCheck size={18}/>}
+            
               label="Bước 3"
               description="Đăng ký thành công"
               allowStepSelect={false}
@@ -229,7 +229,7 @@ function ClientSignupStepOne({ nextStep }: { nextStep: () => void }) {
         districtId: Number(formValues['address.districtId']),
         wardId: Number(formValues['address.wardId']),
       },
-      avatar: formValues.avatar,
+    
       status: Number(formValues.status),
       roles: [],
     };

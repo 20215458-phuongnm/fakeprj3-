@@ -73,19 +73,7 @@ function VariantTable({
                 <Text size="sm">
                   {variant.product.name}
                 </Text>
-                <Group spacing={5}>
-                  {variant.properties && variant.properties.content.map(property => (
-                    <React.Fragment key={property.code}>
-                      <Text size="xs" color="blue" title={property.name}>
-                        {property.value}
-                      </Text>
-                      <Text size="xs" color="dimmed">⋅</Text>
-                    </React.Fragment>
-                  ))}
-                  <Text size="xs" color="dimmed">
-                    SKU: {variant.sku}
-                  </Text>
-                </Group>
+                
               </Stack>
             </td>
             {type === EntityType.PURCHASE_ORDER && (

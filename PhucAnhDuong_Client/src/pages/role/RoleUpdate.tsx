@@ -27,10 +27,7 @@ function RoleUpdate() {
 
       <DefaultPropertyPanel
         id={role.id}
-        createdAt={role.createdAt}
-        updatedAt={role.updatedAt}
-        createdBy="1"
-        updatedBy="1"
+     
       />
 
       <form onSubmit={handleFormSubmit}>
@@ -65,7 +62,7 @@ function RoleUpdate() {
             <Divider mt="xs"/>
 
             <Group position="apart" p="sm">
-              <Button variant="default" onClick={form.reset}>Mặc định</Button>
+              
               <Button type="submit">Cập nhật</Button>
             </Group>
           </Stack>

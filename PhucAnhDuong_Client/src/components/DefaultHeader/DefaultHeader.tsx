@@ -74,11 +74,7 @@ const headerLinks: HeaderLink[] = [
     label: 'Thông báo',
     icon: Bell,
   },
-  {
-    link: '/admin/chat',
-    label: 'Tin nhắn',
-    icon: Messages,
-  },
+ 
   {
     link: '/',
     label: 'Website',
@@ -141,14 +137,7 @@ export function DefaultHeader() {
             >
               <Search size={18}/>
             </ActionIcon>
-            <ActionIcon
-              variant="outline"
-              title="Thay đổi chế độ màu"
-              color={dark ? 'yellow' : 'blue'}
-              onClick={() => toggleColorScheme()}
-            >
-              {dark ? <Sun size={18}/> : <MoonStars size={18}/>}
-            </ActionIcon>
+            
             <ActionIcon
               variant="outline"
               title="Đăng xuất"

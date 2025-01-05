@@ -133,13 +133,13 @@ class ProductConfigs extends Configs {
       isNotAddToSortCriteria: true,
       isNotAddToFilterCriteria: true,
     },
-    variants: {
-      label: 'Phiên bản',
-      type: EntityPropertyType.ARRAY,
-      isShowInTable: true,
-      isNotAddToSortCriteria: true,
-      isNotAddToFilterCriteria: true,
-    },
+    // variants: {
+    //   label: 'Phiên bản',
+    //   type: EntityPropertyType.ARRAY,
+    //   isShowInTable: true,
+    //   isNotAddToSortCriteria: true,
+    //   isNotAddToFilterCriteria: true,
+    // },
     // weight: {
     //   label: 'Khối lượng sản phẩm',
     //   type: EntityPropertyType.NUMBER,

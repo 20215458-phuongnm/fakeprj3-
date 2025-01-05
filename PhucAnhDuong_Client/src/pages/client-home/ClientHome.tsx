@@ -16,9 +16,7 @@ function ClientHome() {
       <Container size="xl">
         <Stack spacing={theme.spacing.xl * 1.5}>
           <ClientHomeBanner/>
-          <ClientHomeFeaturedCategories/>
-          <ClientHomeLatestProducts/>
-          <ClientHomeNewsletter/>
+          <ClientHomeLatestProducts/>        
         </Stack>
       </Container>
     </main>

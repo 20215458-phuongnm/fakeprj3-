@@ -25,17 +25,13 @@ class OrderConfigs extends Configs {
   static manageTitleLinks: TitleLink[] = OrderResourceConfigs.manageTitleLinks;
 
   protected static _rawProperties = {
-    ...PageConfigs.getProperties(true, true),
+    ...PageConfigs.getProperties(true),
     code: {
       label: 'Mã đơn hàng',
       type: EntityPropertyType.STRING,
       isShowInTable: true,
     },
-    'orderResource.name': {
-      label: 'Tên nguồn đơn hàng',
-      type: EntityPropertyType.STRING,
-      isShowInTable: true,
-    },
+
     user: {
       label: 'Người đặt hàng',
       type: EntityPropertyType.PLACEHOLDER,
@@ -55,13 +51,7 @@ class OrderConfigs extends Configs {
       type: EntityPropertyType.NUMBER,
       isShowInTable: true,
     },
-    warehouse: {
-      label: 'Kho',
-      type: EntityPropertyType.PLACEHOLDER,
-      isShowInTable: true,
-      isNotAddToSortCriteria: true,
-      isNotAddToFilterCriteria: true,
-    },
+
     status: {
       label: 'Trạng thái đơn hàng',
       type: EntityPropertyType.NUMBER,
@@ -154,14 +144,7 @@ class OrderConfigs extends Configs {
           <td>{OrderConfigs.properties.id.label}</td>
           <td>{entity.id}</td>
         </tr>
-        <tr>
-          <td>{OrderConfigs.properties.createdAt.label}</td>
-          <td>{DateUtils.isoDateToString(entity.createdAt)}</td>
-        </tr>
-        <tr>
-          <td>{OrderConfigs.properties.updatedAt.label}</td>
-          <td>{DateUtils.isoDateToString(entity.updatedAt)}</td>
-        </tr>
+        
         <tr>
           <td>{OrderConfigs.properties.code.label}</td>
           <td>{entity.code}</td>

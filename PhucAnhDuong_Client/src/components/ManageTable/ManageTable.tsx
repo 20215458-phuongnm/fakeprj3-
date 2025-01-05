@@ -65,15 +65,8 @@ function ManageTable<T extends BaseResponse>(props: ManageTableProps<T>) {
         {props.showedPropertiesFragment(entity as T)}
         <td>
           <Group spacing="xs">
-            <ActionIcon
-              color="blue"
-              variant="outline"
-              size={24}
-              title="Xem"
-              onClick={() => handleViewEntityButton(entity.id)}
-            >
-              <Eye size={16}/>
-            </ActionIcon>
+           
+           
             <ActionIcon
               component={Link}
               to={'update/' + entity.id}

@@ -111,12 +111,7 @@ function UserCreate() {
                   {...form.getInputProps('address.districtId')}
                 />
               </Grid.Col>
-              <Grid.Col>
-                <TextInput
-                  label={UserConfigs.properties.avatar.label}
-                  {...form.getInputProps('avatar')}
-                />
-              </Grid.Col>
+              
               <Grid.Col xs={6}>
                 <Select
                   required
@@ -140,7 +135,7 @@ function UserCreate() {
             <Divider mt="xs"/>
 
             <Group position="apart" p="sm">
-              <Button variant="default" onClick={form.reset}>Mặc định</Button>
+             
               <Button type="submit">Thêm</Button>
             </Group>
           </Stack>

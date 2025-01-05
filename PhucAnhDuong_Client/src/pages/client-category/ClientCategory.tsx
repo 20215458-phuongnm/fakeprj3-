@@ -173,98 +173,24 @@ function ClientCategory() {
               </Group>
             </Stack>
           </Card>
-
-          <Grid gutter="xl">
-            <Grid.Col md={3} mb={theme.spacing.xl}>
-              <Stack spacing="lg">
-                <Group position="apart">
-                  <Group spacing="xs">
-                    <ChartCandle/>
-                    <Text weight={500}>Bộ lọc</Text>
-                  </Group>
-                  <Button
-                    variant="light"
-                    color="pink"
-                    radius="md"
-                    size="xs"
-                    compact
-                    leftIcon={<X size={10}/>}
-                    styles={{ leftIcon: { marginRight: 6 } }}
-                    onClick={handleResetButton}
-                    disabled={disabledResetButton}
-                  >
-                    Đặt mặc định
-                  </Button>
-                </Group>
-
-                <Stack>
-                  <Text weight={500}>Tìm kiếm</Text>
-                  <TextInput
-                    radius="md"
-                    placeholder={'Tìm kiếm trong ' + category.categoryName}
-                    icon={<Search size={16}/>}
-                    value={searchQuery || ''}
-                    onChange={(event) => setSearchQuery(event.currentTarget.value || null)}
-                  />
-                </Stack>
-
-                <Stack>
-                  <Text weight={500}>Khoảng giá</Text>
-                  <Chips variant="filled" multiple value={priceOptions} onChange={handlePriceOptionChips}>
-                    {MiscUtils.generatePriceOptions(filter.filterPriceQuartiles).map((priceOption, index) => (
-                      <Chip key={index} value={priceOption.join('-')}>
-                        {MiscUtils.readablePriceOption(priceOption)}
-                      </Chip>
-                    ))}
-                  </Chips>
-                </Stack>
-
-                <Stack>
-                  <Text weight={500}>Thương hiệu</Text>
-                  {filter.filterBrands.length > 0
-                    ? (
-                      <Chips variant="filled" multiple value={brandOptions} onChange={handleBrandChips}>
-                        {filter.filterBrands.map(brand => (
-                          <Chip key={brand.brandId} value={brand.brandId}>{brand.brandName}</Chip>
-                        ))}
-                      </Chips>
-                    ) : <Text sx={{ fontStyle: 'italic' }} color="dimmed">Không có tùy chọn</Text>}
-                </Stack>
-
-                <Stack>
-                  <Text weight={500}>Khác</Text>
-                  <Checkbox
-                    label="Chỉ tính còn hàng"
-                    checked={activeSaleable}
-                    onChange={(event) => updateActiveSaleable(event.currentTarget.checked)}
-                  />
-                </Stack>
-              </Stack>
-            </Grid.Col>
-
-            <Grid.Col md={9}>
-              <Stack spacing="lg">
-                <Group position="apart">
-                  <Group spacing="xs">
-                    <ArrowsDownUp size={20}/>
-                    <Text weight={500} mr={theme.spacing.xs}>Sắp xếp theo</Text>
-                    <RadioGroup
-                      value={activeSort || ''}
-                      onChange={(value) => updateActiveSort((value as '' | 'lowest-price' | 'highest-price') || null)}
-                    >
-                      <Radio value="" label="Mới nhất"/>
-                      <Radio value="lowest-price" label="Giá thấp → cao"/>
-                      <Radio value="highest-price" label="Giá cao → thấp"/>
-                    </RadioGroup>
-                  </Group>
-                  <Text>{totalProducts} sản phẩm</Text>
-                </Group>
-
-                <ClientCategoryProducts categorySlug={category.categorySlug}/>
-              </Stack>
-            </Grid.Col>
-          </Grid>
-
+          <Stack spacing="lg">
+            <Group position="apart">
+              <Group spacing="xs">
+                <ArrowsDownUp size={20}/>
+                <Text weight={500} mr={theme.spacing.xs}>Sắp xếp theo</Text>
+                <RadioGroup
+                  value={activeSort || ''}
+                  onChange={(value) => updateActiveSort((value as '' | 'lowest-price' | 'highest-price') || null)}
+                >
+                  <Radio value="" label="Mới nhất"/>
+                  <Radio value="lowest-price" label="Giá thấp → cao"/>
+                  <Radio value="highest-price" label="Giá cao → thấp"/>
+                </RadioGroup>
+              </Group>
+              <Text>{totalProducts} sản phẩm</Text>
+            </Group>
+            <ClientCategoryProducts categorySlug={category.categorySlug}/>
+          </Stack>
         </Stack>
       </Container>
     </main>

@@ -32,18 +32,6 @@ class CategoryConfigs extends Configs {
       label: 'Mô tả danh mục sản phẩm',
       type: EntityPropertyType.STRING,
     },
-    thumbnail: {
-      label: 'Hình đại diện',
-      type: EntityPropertyType.STRING,
-      isShowInTable: true,
-      isNotAddToSortCriteria: true,
-      isNotAddToFilterCriteria: true,
-    },
-    'parentCategory.name': {
-      label: 'Tên danh mục cha',
-      type: EntityPropertyType.STRING,
-      isShowInTable: true,
-    },
     status: {
       label: 'Trạng thái danh mục sản phẩm',
       type: EntityPropertyType.NUMBER,

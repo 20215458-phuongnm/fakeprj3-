@@ -68,7 +68,6 @@ function useUserCreateViewModel() {
         districtId: Number(formValues['address.districtId']),
         wardId: null,
       },
-      avatar: formValues.avatar.trim() || null,
       status: Number(formValues.status),
       roles: formValues.roles.map((roleId) => ({ id: Number(roleId) })),
     };

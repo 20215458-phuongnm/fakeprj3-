@@ -91,13 +91,13 @@ function ProductUpdate() {
                   {...form.getInputProps('code')}
                 />
               </Grid.Col>
-              <Grid.Col xs={6}>
+              {/* <Grid.Col xs={6}>
                 <TextInput
                   required
                   label={ProductConfigs.properties.slug.label}
                   {...form.getInputProps('slug')}
                 />
-              </Grid.Col>
+              </Grid.Col> */}
               <Grid.Col>
                 <Textarea
                   label={ProductConfigs.properties.shortDescription.label}
@@ -124,7 +124,7 @@ function ProductUpdate() {
                   setImageResponses={(imageResponses) => form.setFieldValue('images', imageResponses)}
                 />
               </Grid.Col>
-              <Grid.Col>
+              {/* <Grid.Col>
                 <Title order={4}>Thông số sản phẩm</Title>
                 <Text size="sm">Thêm các thông số của sản phẩm</Text>
               </Grid.Col>
@@ -161,7 +161,7 @@ function ProductUpdate() {
                   selectedVariantIndexes={selectedVariantIndexes}
                   setSelectedVariantIndexes={setSelectedVariantIndexes}
                 />
-              </Grid.Col>
+              </Grid.Col> */}
               <Grid.Col>
                 <Title order={4}>Thông tin bổ sung</Title>
                 <Text size="sm">Một số thông tin thêm</Text>
@@ -185,7 +185,7 @@ function ProductUpdate() {
                   {...form.getInputProps('categoryId')}
                 />
               </Grid.Col>
-              <Grid.Col xs={6}>
+              {/* <Grid.Col xs={6}>
                 <Select
                   label={ProductConfigs.properties.brandId.label}
                   placeholder="--"
@@ -194,8 +194,8 @@ function ProductUpdate() {
                   data={brandSelectList}
                   {...form.getInputProps('brandId')}
                 />
-              </Grid.Col>
-              <Grid.Col xs={6}>
+              </Grid.Col> */}
+              {/* <Grid.Col xs={6}>
                 <Select
                   label={ProductConfigs.properties.supplierId.label}
                   placeholder="--"
@@ -204,7 +204,7 @@ function ProductUpdate() {
                   data={supplierSelectList}
                   {...form.getInputProps('supplierId')}
                 />
-              </Grid.Col>
+              </Grid.Col> */}
               <Grid.Col xs={6}>
                 <Select
                   label={ProductConfigs.properties.unitId.label}

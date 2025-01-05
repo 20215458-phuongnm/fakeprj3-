@@ -75,13 +75,13 @@ function ProductCreate() {
                   {...form.getInputProps('code')}
                 />
               </Grid.Col>
-              <Grid.Col xs={6}>
+              {/* <Grid.Col xs={6}>
                 <TextInput
                   required
                   label={ProductConfigs.properties.slug.label}
                   {...form.getInputProps('slug')}
                 />
-              </Grid.Col>
+              </Grid.Col> */}
               <Grid.Col>
                 <Textarea
                   label={ProductConfigs.properties.shortDescription.label}
@@ -106,7 +106,7 @@ function ProductCreate() {
                   setThumbnailName={setThumbnailName}
                 />
               </Grid.Col>
-              <Grid.Col>
+              {/* <Grid.Col>
                 <Title order={4}>Thông số sản phẩm</Title>
                 <Text size="sm">Thêm các thông số của sản phẩm</Text>
               </Grid.Col>
@@ -143,8 +143,8 @@ function ProductCreate() {
                   selectedVariantIndexes={selectedVariantIndexes}
                   setSelectedVariantIndexes={setSelectedVariantIndexes}
                 />
-              </Grid.Col>
-              <Grid.Col>
+              </Grid.Col>*/}
+              <Grid.Col> 
                 <Title order={4}>Thông tin bổ sung</Title>
                 <Text size="sm">Một số thông tin thêm</Text>
               </Grid.Col>

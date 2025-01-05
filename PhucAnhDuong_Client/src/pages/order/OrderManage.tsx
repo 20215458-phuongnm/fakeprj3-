@@ -43,7 +43,7 @@ function OrderManage() {
     return (
       <>
         <td>{entity.id}</td>
-        <td>{DateUtils.isoDateToString(entity.createdAt)}</td>
+       
         <td>
           <Group spacing="xs">
             <Highlight
@@ -68,14 +68,7 @@ function OrderManage() {
             </ActionIcon>
           </Group>
         </td>
-        <td>
-          <Group spacing="xs">
-            <ColorSwatch color={entity.orderResource.color}/>
-            <Highlight highlight={searchToken} highlightColor="blue" size="sm">
-              {entity.orderResource.name}
-            </Highlight>
-          </Group>
-        </td>
+        
         <td>
           <Stack spacing={0}>
             <Highlight highlight={searchToken} highlightColor="blue" size="sm">
@@ -111,19 +104,7 @@ function OrderManage() {
             <PaymentMethodIcon color={theme.colors.gray[5]}/>
           </Stack>
         </td>
-        <td>
-          <ActionIcon
-            color="blue"
-            variant="hover"
-            size={24}
-            title="Tạo phiếu xuất kho"
-            component="a"
-            href={DocketConfigs.managerPath + '/create'}
-            target="_blank"
-          >
-            <Plus/>
-          </ActionIcon>
-        </td>
+      
         <td>
           <Stack spacing="xs" sx={{ alignItems: 'start' }}>
             {OrderConfigs.orderStatusBadgeFragment(entity.status)}

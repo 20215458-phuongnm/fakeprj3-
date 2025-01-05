@@ -42,8 +42,7 @@ function RoleManage() {
   const showedPropertiesFragment = (entity: RoleResponse) => (
     <>
       <td>{entity.id}</td>
-      <td>{DateUtils.isoDateToString(entity.createdAt)}</td>
-      <td>{DateUtils.isoDateToString(entity.updatedAt)}</td>
+     
       <td>
         <Highlight highlight={searchToken} highlightColor="blue" size="sm">
           {entity.code}
@@ -64,14 +63,7 @@ function RoleManage() {
         <td>{RoleConfigs.properties.id.label}</td>
         <td>{entity.id}</td>
       </tr>
-      <tr>
-        <td>{RoleConfigs.properties.createdAt.label}</td>
-        <td>{DateUtils.isoDateToString(entity.createdAt)}</td>
-      </tr>
-      <tr>
-        <td>{RoleConfigs.properties.updatedAt.label}</td>
-        <td>{DateUtils.isoDateToString(entity.updatedAt)}</td>
-      </tr>
+
       <tr>
         <td>{RoleConfigs.properties.code.label}</td>
         <td><Code>{entity.code}</Code></td>

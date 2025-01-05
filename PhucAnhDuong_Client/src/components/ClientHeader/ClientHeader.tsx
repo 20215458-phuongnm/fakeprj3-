@@ -303,13 +303,7 @@ function ClientHeader() {
                     >
                       Đặt trước sản phẩm
                     </Menu.Item> */}
-                    <Menu.Item
-                      icon={<MessageCircle size={14} />}
-                      component={Link}
-                      to="/user/chat"
-                    >
-                      Yêu cầu tư vấn
-                    </Menu.Item>
+                    
                     <Menu.Item
                       color="pink"
                       icon={<Logout size={14} />}
@@ -372,14 +366,6 @@ function ClientHeader() {
               <Button variant="subtle" color="pink" radius="md">
                 Khuyến mại
               </Button> */}
-            </Group>
-            <Group spacing="xs">
-              <Badge color="pink" size="xs" variant="filled">
-                Hot
-              </Badge>
-              <Text size="sm" color="dimmed">
-                Miễn phí giao hàng cho đơn hàng trên 1 triệu đồng
-              </Text>
             </Group>
           </Group>
         </Stack>

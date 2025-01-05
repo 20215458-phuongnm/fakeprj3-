@@ -143,18 +143,7 @@ function ClientSearch() {
               <Text>{products?.totalElements || 0} sản phẩm</Text>
             </Group>
 
-            <Group spacing="xs">
-              <ChartCandle size={20}/>
-              <Text weight={500} mr={theme.spacing.xs}>Lọc theo</Text>
-              <Checkbox
-                label="Chỉ tính còn hàng"
-                checked={activeSaleable}
-                onChange={(event) => {
-                  setActiveSaleable(event.currentTarget.checked);
-                  setActivePage(1);
-                }}
-              />
-            </Group>
+            
 
             {resultFragment}
           </Stack>

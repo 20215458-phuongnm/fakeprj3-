@@ -99,9 +99,9 @@ function ProductManage() {
           )}
         </Stack>
       </td>
-      <td>
+      {/* <td>
         <VariantTablePopover variants={entity.variants} productProperties={entity.properties}/>
-      </td>
+      </td> */}
     </>
   );
 

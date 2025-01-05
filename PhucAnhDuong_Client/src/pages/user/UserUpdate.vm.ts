@@ -43,7 +43,7 @@ function useUserUpdateViewModel(id: number) {
         'address.line': userResponse.address.line || '',
         'address.provinceId': userResponse.address.province ? String(userResponse.address.province.id) : null,
         'address.districtId': userResponse.address.district ? String(userResponse.address.district.id) : null,
-        avatar: userResponse.avatar || '',
+       
         status: String(userResponse.status),
         roles: userResponse.roles.map((role) => String(role.id)),
       };
@@ -107,7 +107,6 @@ function useUserUpdateViewModel(id: number) {
             districtId: Number(formValues['address.districtId']),
             wardId: null,
           },
-          avatar: formValues.avatar.trim() || null,
           status: Number(formValues.status),
           roles: formValues.roles.map((roleId) => ({ id: Number(roleId) })),
         };

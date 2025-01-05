@@ -95,9 +95,7 @@ function EmployeeManage() {
           {entity.user.fullname}
         </Highlight>
       </td>
-      <td>
-        <Avatar src={entity.user.avatar} alt={entity.user.fullname} radius="xl" size="sm"/>
-      </td>
+  
       <td>
         <Highlight highlight={searchToken} highlightColor="blue" size="sm">
           {entity.office.name}
@@ -182,9 +180,7 @@ function EmployeeManage() {
       </tr>
       <tr>
         <td>{EmployeeConfigs.properties['user.avatar'].label}</td>
-        <td>
-          <Avatar src={entity.user.avatar} alt={entity.user.fullname} radius="xl" size="sm"/>
-        </td>
+        
       </tr>
       <tr>
         <td>{EmployeeConfigs.properties['user.status'].label}</td>

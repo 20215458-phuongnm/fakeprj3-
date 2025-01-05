@@ -78,13 +78,7 @@ class CustomerConfigs extends Configs {
       label: 'Mã quận huyện khách hàng',
       type: EntityPropertyType.STRING,
     },
-    'user.avatar': {
-      label: 'Ảnh đại diện',
-      type: EntityPropertyType.STRING,
-      isShowInTable: true,
-      isNotAddToSortCriteria: true,
-      isNotAddToFilterCriteria: true,
-    },
+
     'user.status': {
       label: 'Trạng thái người dùng',
       type: EntityPropertyType.NUMBER,
@@ -113,19 +107,10 @@ class CustomerConfigs extends Configs {
       isNotAddToSortCriteria: true,
       isNotAddToFilterCriteria: true,
     },
-    'customerGroup.name': {
-      label: 'Tên nhóm khách hàng',
-      type: EntityPropertyType.STRING,
-      isShowInTable: true,
-    },
-    customerGroupId: {
-      label: 'Nhóm khách hàng',
-      type: EntityPropertyType.NUMBER,
-      isNotAddToSortCriteria: true,
-      isNotAddToFilterCriteria: true,
-    },
+  
+  
     'customerStatus.name': {
-      label: 'Tên trạng thái khách hàng',
+      label: 'Trạng thái khách hàng',
       type: EntityPropertyType.STRING,
       isShowInTable: true,
     },
@@ -135,17 +120,7 @@ class CustomerConfigs extends Configs {
       isNotAddToSortCriteria: true,
       isNotAddToFilterCriteria: true,
     },
-    'customerResource.name': {
-      label: 'Tên nguồn khách hàng',
-      type: EntityPropertyType.STRING,
-      isShowInTable: true,
-    },
-    customerResourceId: {
-      label: 'Nguồn khách hàng',
-      type: EntityPropertyType.NUMBER,
-      isNotAddToSortCriteria: true,
-      isNotAddToFilterCriteria: true,
-    },
+
   };
 
   static properties = CustomerConfigs._rawProperties as

@@ -70,27 +70,13 @@ function ClientFooter() {
                 <Headset size={52} color={theme.colors[theme.primaryColor][6]} strokeWidth={1.25}/>
                 <Stack spacing={theme.spacing.xs / 4}>
                   <Text size="sm" color="dimmed">Hotline</Text>
-                  <Text size="xl">0976 241 817 </Text>
+                  <Text size="xl">0982565117</Text>
                 </Stack>
               </Group>
               <Stack spacing={theme.spacing.xs / 2}>
                 <Text weight={500}>Địa chỉ liên hệ</Text>
-                <Text>Chung cư Goldmark City, Bắc Từ Liêm, Hà Nội</Text>
+                <Text>Đại học Bách khoa Hà Nội</Text>
               </Stack>
-              <Group spacing="sm">
-                <ActionIcon color="blue" size="xl" radius="xl" variant="light">
-                  <BrandFacebook strokeWidth={1.5}/>
-                </ActionIcon>
-                <ActionIcon color="blue" size="xl" radius="xl" variant="light">
-                  <BrandYoutube strokeWidth={1.5}/>
-                </ActionIcon>
-                <ActionIcon color="blue" size="xl" radius="xl" variant="light">
-                  <BrandInstagram strokeWidth={1.5}/>
-                </ActionIcon>
-                <ActionIcon color="blue" size="xl" radius="xl" variant="light">
-                  <BrandTiktok strokeWidth={1.5}/>
-                </ActionIcon>
-              </Group>
             </Stack>
           </Grid.Col>
           <Grid.Col md={6}>
@@ -119,66 +105,12 @@ function ClientFooter() {
                       <Anchor component={Link} to="/">Hợp tác</Anchor>
                       <Anchor component={Link} to="/">Liên hệ mua hàng</Anchor>
                     </Stack>
-                  </Stack>
-                  <Group>
-                    <SegmentedControl
-                      size="xs"
-                      value={colorScheme}
-                      onChange={(value: 'light' | 'dark') => toggleColorScheme(value)}
-                      data={[
-                        {
-                          value: 'light',
-                          label: (
-                            <Center>
-                              <Sun size={14} strokeWidth={1.5}/>
-                              <Box ml={10}>Sáng</Box>
-                            </Center>
-                          ),
-                        },
-                        {
-                          value: 'dark',
-                          label: (
-                            <Center>
-                              <Moon size={14} strokeWidth={1.5}/>
-                              <Box ml={10}>Tối</Box>
-                            </Center>
-                          ),
-                        },
-                      ]}
-                    />
-                  </Group>
+                  </Stack>     
                 </Stack>
               </Grid.Col>
             </Grid>
           </Grid.Col>
         </Grid>
-        <Group className={classes.afterFooter} position="apart">
-          <Text color="dimmed" size="sm">
-            © 2024 PhucAnhDuong Corporation. Bảo lưu mọi quyền.
-          </Text>
-          <Group spacing="xs">
-            <Anchor href="https://visa.com" target="_blank" rel="noopener noreferrer">
-              <ThemeIcon variant="outline" color="gray" sx={{ width: 50, height: 30 }}>
-                <BrandVisa strokeWidth={1.5}/>
-              </ThemeIcon>
-            </Anchor>
-            <Anchor href="https://mastercard.com" target="_blank" rel="noopener noreferrer">
-              <ThemeIcon variant="outline" color="gray" sx={{ width: 50, height: 30 }}>
-                <BrandMastercard strokeWidth={1.5}/>
-              </ThemeIcon>
-            </Anchor>
-            <Anchor component={Link} to="/">
-              <ThemeIcon variant="outline" color="gray" sx={{ width: 50, height: 30 }}>
-                <BuildingBank strokeWidth={1.5}/>
-              </ThemeIcon>
-            </Anchor>
-            <Anchor component={Link} to="/">
-              <ThemeIcon variant="outline" color="gray" sx={{ width: 50, height: 30 }}>
-                <CurrencyDong strokeWidth={1.5}/>
-              </ThemeIcon>
-            </Anchor>
-          </Group>
-        </Group>
       </Container>
     </footer>
   );

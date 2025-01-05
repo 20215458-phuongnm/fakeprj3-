@@ -163,14 +163,7 @@ function ClientProductIntro({ product }: ClientProductIntroProps) {
             <Stack spacing="lg">
               <Stack spacing={2} sx={{ alignItems: 'start' }}>
                 {!product.productSaleable && <Badge color="red" variant="filled" mb={5}>Hết hàng</Badge>}
-                {product.productBrand && (
-                  <Group spacing={5}>
-                    <Text size="sm">Thương hiệu:</Text>
-                    <Anchor component={Link} to={'/brand/' + product.productBrand.brandId} size="sm">
-                      {product.productBrand.brandName}
-                    </Anchor>
-                  </Group>
-                )}
+                
                 <Text sx={{ fontSize: 26 }} weight={500}>
                   {product.productName}
                 </Text>
@@ -219,7 +212,7 @@ function ClientProductIntro({ product }: ClientProductIntroProps) {
               </Box>
 
               <Stack spacing="xs">
-                <Text weight={500}>Phiên bản</Text>
+               
                 {product.productVariants.length > 0
                   ? product.productVariants.some(variant => variant.variantProperties)
                     ? (
@@ -244,19 +237,6 @@ function ClientProductIntro({ product }: ClientProductIntroProps) {
                             disabled={selectedVariantIndex === index || variant.variantInventory === 0}
                           >
                             <Stack spacing={2.5}>
-                              <SimpleGrid cols={2} spacing={2.5}>
-                                {variant.variantProperties?.content.map(property => (
-                                  <React.Fragment key={property.id}>
-                                    <Text size="sm">{property.name}</Text>
-                                    <Text
-                                      size="sm"
-                                      sx={{ textAlign: 'right', fontWeight: 500 }}
-                                    >
-                                      {property.value}
-                                    </Text>
-                                  </React.Fragment>
-                                ))}
-                              </SimpleGrid>
                               <Text size="xs" color="dimmed">Tồn kho: {variant.variantInventory}</Text>
                               <Text size="xs" color="dimmed">Giá: {MiscUtils.formatPrice(
                                 MiscUtils.calculateDiscountedPrice(
@@ -322,7 +302,7 @@ function ClientProductIntro({ product }: ClientProductIntroProps) {
                       Chọn mua
                     </Button>
                   )}
-                <Button
+                {/* <Button
                   radius="md"
                   size="lg"
                   color="pink"
@@ -331,7 +311,7 @@ function ClientProductIntro({ product }: ClientProductIntroProps) {
                   onClick={handleCreateWishButton}
                 >
                   Yêu thích
-                </Button>
+                </Button> */}
               </Group>
             </Stack>
           </Grid.Col>

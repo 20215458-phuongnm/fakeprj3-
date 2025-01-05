@@ -70,13 +70,13 @@ class UserConfigs extends Configs {
       label: 'Mã quận huyện',
       type: EntityPropertyType.STRING,
     },
-    avatar: {
-      label: 'Ảnh đại diện',
-      type: EntityPropertyType.STRING,
-      isShowInTable: true,
-      isNotAddToSortCriteria: true,
-      isNotAddToFilterCriteria: true,
-    },
+    // avatar: {
+    //   label: 'Ảnh đại diện',
+    //   type: EntityPropertyType.STRING,
+    //   isShowInTable: true,
+    //   isNotAddToSortCriteria: true,
+    //   isNotAddToFilterCriteria: true,
+    // },
     status: {
       label: 'Trạng thái người dùng',
       type: EntityPropertyType.NUMBER,
@@ -122,7 +122,6 @@ class UserConfigs extends Configs {
     'address.line': '',
     'address.provinceId': null as string | null,
     'address.districtId': null as string | null,
-    avatar: '',
     status: '1',
     roles: [] as string[],
   };
@@ -137,7 +136,6 @@ class UserConfigs extends Configs {
     'address.line': z.string(),
     'address.provinceId': z.string(),
     'address.districtId': z.string(),
-    avatar: z.string(),
     status: z.string(),
     roles: z.array(z.string()).nonempty(),
   });

@@ -34,31 +34,19 @@ function ClientUser() {
                       </Text>
 
                       <Group position="apart">
-                        <Group>
-                          <Avatar color="cyan" size="lg" radius="md">{user?.fullname.charAt(0)}</Avatar>
+                        <Group>                     
                           <Stack spacing={0}>
                             <Text weight={500}>{user?.fullname}</Text>
                             <Text color="dimmed">@{user?.username}</Text>
                           </Stack>
                         </Group>
-                        <Button
-                          component={Link}
-                          to="/user/setting/personal"
-                          variant="outline"
-                          radius="md"
-                        >
-                          Cập nhật
-                        </Button>
+                       
                       </Group>
 
                       <Divider my={3.5} variant="dotted"/>
 
                       <Group spacing="sm">
-                        <ThemeIcon radius="xl" size="lg" variant="light">
-                          {user?.gender === 'M'
-                            ? <Mars size={20} strokeWidth={1.5}/>
-                            : <Venus size={20} strokeWidth={1.5}/>}
-                        </ThemeIcon>
+                        
                         <Stack spacing={0}>
                           <Text weight={500}>Giới tính</Text>
                           {user?.gender === 'M' ? 'Nam' : 'Nữ'}
@@ -66,9 +54,7 @@ function ClientUser() {
                       </Group>
 
                       <Group spacing="sm" sx={{ flexWrap: 'nowrap' }}>
-                        <ThemeIcon radius="xl" size="lg" variant="light">
-                          <Home size={20} strokeWidth={1.5}/>
-                        </ThemeIcon>
+                        
                         <Stack spacing={0}>
                           <Text weight={500}>Địa chỉ</Text>
                           <Text>
@@ -89,42 +75,24 @@ function ClientUser() {
 
                       <Group position="apart">
                         <Group spacing="sm">
-                          <ThemeIcon radius="xl" size="lg" variant="light">
-                            <Phone size={20} strokeWidth={1.5}/>
-                          </ThemeIcon>
+                          
                           <Stack spacing={0}>
                             <Text weight={500}>Số điện thoại</Text>
                             <Text>{user?.phone}</Text>
                           </Stack>
                         </Group>
-                        <Button
-                          component={Link}
-                          to="/user/setting/phone"
-                          variant="outline"
-                          radius="md"
-                        >
-                          Cập nhật
-                        </Button>
+                       
                       </Group>
 
                       <Group position="apart">
                         <Group spacing="sm">
-                          <ThemeIcon radius="xl" size="lg" variant="light">
-                            <Mail size={20} strokeWidth={1.5}/>
-                          </ThemeIcon>
+                          
                           <Stack spacing={0}>
                             <Text weight={500}>Email</Text>
                             <Text>{user?.email}</Text>
                           </Stack>
                         </Group>
-                        <Button
-                          component={Link}
-                          to="/user/setting/email"
-                          variant="outline"
-                          radius="md"
-                        >
-                          Cập nhật
-                        </Button>
+                   
                       </Group>
 
                       <Text size="lg" color="dimmed" weight={500}>
@@ -133,19 +101,10 @@ function ClientUser() {
 
                       <Group position="apart">
                         <Group spacing="sm">
-                          <ThemeIcon radius="xl" size="lg" variant="light">
-                            <Lock size={20} strokeWidth={1.5}/>
-                          </ThemeIcon>
+                          
                           <Text weight={500}>Đổi mật khẩu</Text>
                         </Group>
-                        <Button
-                          component={Link}
-                          to="/user/setting/password"
-                          variant="outline"
-                          radius="md"
-                        >
-                          Cập nhật
-                        </Button>
+                        
                       </Group>
                     </Stack>
                   </Grid.Col>

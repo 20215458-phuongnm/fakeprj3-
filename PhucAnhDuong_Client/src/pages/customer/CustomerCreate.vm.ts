@@ -95,7 +95,7 @@ function useCustomerCreateViewModel() {
           districtId: Number(formValues['user.address.districtId']),
           wardId: null,
         },
-        avatar: formValues['user.avatar'].trim() || null,
+ 
         status: Number(formValues['user.status']),
         roles: [{ id: CustomerConfigs.CUSTOMER_ROLE_ID }],
       },

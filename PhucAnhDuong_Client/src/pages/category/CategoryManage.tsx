@@ -53,12 +53,6 @@ function CategoryManage() {
           {entity.slug}
         </Highlight>
       </td>
-      <td>
-        <Avatar src={entity.thumbnail} alt={entity.name} radius="lg" size="lg" color="grape">
-          <QuestionMark size={30}/>
-        </Avatar>
-      </td>
-      <td>{entity.parentCategory ? entity.parentCategory.name : <em>không có</em>}</td>
       <td>{categoryStatusBadgeFragment(entity.status)}</td>
     </>
   );
@@ -90,16 +84,7 @@ function CategoryManage() {
         <td style={{ maxWidth: 300 }}>{entity.description}</td>
       </tr>
       <tr>
-        <td>{CategoryConfigs.properties.thumbnail.label}</td>
-        <td>
-          <Avatar src={entity.thumbnail} alt={entity.name} radius="lg" size="lg" color="grape">
-            <QuestionMark size={30}/>
-          </Avatar>
-        </td>
-      </tr>
-      <tr>
-        <td>{CategoryConfigs.properties['parentCategory.name'].label}</td>
-        <td>{entity.parentCategory ? entity.parentCategory.name : <em>không có</em>}</td>
+        
       </tr>
       <tr>
         <td>{CategoryConfigs.properties.status.label}</td>

@@ -58,9 +58,6 @@ function UserManage() {
         </Highlight>
       </td>
       <td>{entity.gender === 'M' ? 'Nam' : 'Nữ'}</td>
-      <td>
-        <Avatar src={entity.avatar} alt={entity.fullname} radius="xl" size="sm"/>
-      </td>
       <td>{userStatusBadgeFragment(entity.status)}</td>
       <td>
         <Stack spacing="xs" align="flex-start">
@@ -126,9 +123,6 @@ function UserManage() {
       </tr>
       <tr>
         <td>{UserConfigs.properties.avatar.label}</td>
-        <td>
-          <Avatar src={entity.avatar} alt={entity.fullname} radius="xl" size="sm"/>
-        </td>
       </tr>
       <tr>
         <td>{UserConfigs.properties.status.label}</td>
